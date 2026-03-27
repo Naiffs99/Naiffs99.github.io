@@ -658,7 +658,8 @@
         /* ── RESPONSIVE ── */
         @media (max-width: 900px) {
             .hero-inner { grid-template-columns: 1fr; }
-            .hero-photo { display: none; }
+            .hero-photo { max-width: 260px; max-height: 320px; margin: 2.5rem auto 0; }
+            .hero-photo::after { display: none; }
             .about-grid { grid-template-columns: 1fr; gap: 2.75rem; }
         }
 
@@ -1091,8 +1092,7 @@
             </div>
 
             <div class="contact-item">
-                <!-- TODO: Replace href="#" with your LinkedIn URL e.g. https://linkedin.com/in/yourhandle -->
-                <a href="#" target="_blank" rel="noopener">
+                <a href="https://www.linkedin.com/in/naiffalsubaie/" target="_blank" rel="noopener">
                     <div class="contact-icon-wrap">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                             <rect x="2" y="2" width="20" height="20" rx="3"/>
@@ -1195,7 +1195,7 @@
         'exp3.b3':'Ensured benefits realization of strategic initiatives.',
         'exp4.period':'Jul 2017 – Mar 2019',
         'exp4.role':'Strategy &amp; Performance Supervisor',
-        'exp4.org':'Small &amp; Medium Enterprises General Authority (Monsha'at)',
+        'exp4.org':'Small &amp; Medium Enterprises General Authority (Monsha\'at)',
         'exp4.b1':'Represented SMEA in NTP 2.0 planning and alignment with Vision 2030 entities.',
         'exp4.b2':'Led corporate performance implementation using the Balanced Scorecard methodology.',
         'exp4.b3':'Managed initiative alignment, reporting, and budgeting processes.',
