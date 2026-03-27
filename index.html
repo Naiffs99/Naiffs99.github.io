@@ -468,14 +468,24 @@
             border-bottom: 1px solid var(--gold);
         }
 
-        .skill-tags { display: flex; flex-direction: column; gap: 0.42rem; }
+        .skill-tags { display: flex; flex-direction: column; gap: 0.55rem; }
 
         .skill-tag {
             font-size: 0.815rem;
             color: var(--gray-700);
-            padding: 0.32rem 0;
-            border-bottom: 1px solid rgba(0,0,0,0.055);
+            padding: 0.18rem 0 0.18rem 1rem;
             line-height: 1.4;
+            position: relative;
+        }
+
+        .skill-tag::before {
+            content: '›';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-size: 1rem;
+            line-height: 1.35;
+            font-weight: 600;
         }
 
         /* ── CREDENTIALS ── */
@@ -725,7 +735,8 @@
         html[lang="ar"] .about-text p { text-align: right; }
         html[lang="ar"] .achievement-card p { text-align: right; }
         html[lang="ar"] .achievement-card { border-left: none; border-right: 3px solid var(--gold); padding-right: 1.4rem; padding-left: 1rem; }
-        html[lang="ar"] .skill-tag { text-align: right; }
+        html[lang="ar"] .skill-tag { text-align: right; padding-left: 0; padding-right: 1rem; }
+        html[lang="ar"] .skill-tag::before { left: auto; right: 0; content: '‹'; }
         html[lang="ar"] .pillar-desc { text-align: right; }
         html[lang="ar"] .cred-card { border-left: 1px solid var(--gray-300); border-right: 4px solid var(--gold); }
         html[lang="ar"] .education-card { flex-direction: row-reverse; }
@@ -790,8 +801,8 @@
                     <span class="hero-stat-label" data-i18n="hero.stat3.label">Certifications</span>
                 </div>
                 <div class="hero-stat">
-                    <span class="hero-stat-number">🌐</span>
-                    <span class="hero-stat-label" data-i18n="hero.stat4.label">Int'l Representation</span>
+                    <span class="hero-stat-number">2</span>
+                    <span class="hero-stat-label" data-i18n="hero.stat4.label">Built from Scratch</span>
                 </div>
             </div>
         </div>
@@ -806,35 +817,35 @@
 <section id="about">
     <div class="section-inner">
         <p class="section-label" data-i18n="about.label">About</p>
-        <h2 class="section-title" data-i18n="about.title">Strategist. Institution Builder. National Contributor.</h2>
+        <h2 class="section-title" data-i18n="about.title">Strategist. Builder. Insider.</h2>
         <div class="section-divider"></div>
         <div class="about-grid fade-in">
             <div class="about-text">
-                <p data-i18n="about.p1">I've spent the past 13 years at the intersection of strategy and execution — not as an outside adviser, but as the person building the systems from within. My career has centered on a single question: how do institutions translate national ambition into measurable results?</p>
-                <p data-i18n="about.p2">At Elm, Monsha'at, and now SAIP, I've built planning and performance functions from the ground up — designing the frameworks, leading the teams, and owning the outcomes at each stage of Saudi Arabia's transformation journey.</p>
-                <p data-i18n="about.p3">At SAIP, I lead the Strategy Management Office across the full enterprise: from formulating long-term strategy to overseeing execution through KPIs, dashboards, and portfolio management. Beyond the institution, I represent Saudi Arabia's intellectual property interests in international forums, including a founding role in the Saudi Fund-in-Trust initiative at WIPO.</p>
-                <p data-i18n="about.p4">I believe the best strategy work is invisible to the public — but it is foundational to everything that works.</p>
+                <p data-i18n="about.p1">Thirteen years. Three government transformation entities. Two performance functions built from the ground up. One consistent conviction: strategy only matters when it changes what actually happens.</p>
+                <p data-i18n="about.p2">I&#39;ve spent my career inside the system, not advising from outside it. At Elm, Monsha&#39;at, and now SAIP, the question has always been the same — how do you take a national ambition and build the machinery that makes it real?</p>
+                <p data-i18n="about.p3">Today I lead the Strategy Management Office at SAIP — the full stack: long-term strategy, KPIs, dashboards, portfolio governance, and the team that makes it run. Beyond the organization, I represent Saudi interests internationally, including founding Saudi Arabia&#39;s first Collective Management Organization and anchoring the Saudi Fund-in-Trust initiative at WIPO.</p>
+                <p data-i18n="about.p4">The best strategy work doesn&#39;t announce itself. It&#39;s the foundation everything else stands on.</p>
             </div>
             <div class="about-pillars">
                 <div class="pillar-card">
                     <div class="pillar-icon">🏛️</div>
                     <div class="pillar-title" data-i18n="pillar1.title">National Strategy</div>
-                    <div class="pillar-desc" data-i18n="pillar1.desc">Direct, sustained involvement in Vision 2030 delivery across multiple government entities.</div>
+                    <div class="pillar-desc" data-i18n="pillar1.desc">Not a consultant to Vision 2030 — a builder inside it. Across three entities, for thirteen years.</div>
                 </div>
                 <div class="pillar-card">
                     <div class="pillar-icon">🔧</div>
                     <div class="pillar-title" data-i18n="pillar2.title">Institution Building</div>
-                    <div class="pillar-desc" data-i18n="pillar2.desc">Built strategic performance functions from scratch at two major government authorities.</div>
+                    <div class="pillar-desc" data-i18n="pillar2.desc">Twice handed a blank page and told to build a function. Twice delivered.</div>
                 </div>
                 <div class="pillar-card">
                     <div class="pillar-icon">📊</div>
                     <div class="pillar-title" data-i18n="pillar3.title">Performance &amp; KPIs</div>
-                    <div class="pillar-desc" data-i18n="pillar3.desc">Developed cross-ministerial KPI frameworks used in national performance measurement.</div>
+                    <div class="pillar-desc" data-i18n="pillar3.desc">The frameworks, the scorecards, the dashboards — designed for ministers, used across government.</div>
                 </div>
                 <div class="pillar-card">
                     <div class="pillar-icon">🌐</div>
                     <div class="pillar-title" data-i18n="pillar4.title">Global Representation</div>
-                    <div class="pillar-desc" data-i18n="pillar4.desc">Representing Saudi interests at WIPO and international strategic committees.</div>
+                    <div class="pillar-desc" data-i18n="pillar4.desc">Saudi Arabia&#39;s voice in international IP forums — from committee tables to founding moments.</div>
                 </div>
             </div>
         </div>
@@ -855,11 +866,11 @@
                 <h3 class="timeline-role" data-i18n="exp1.role">Executive Director, Strategy Management Office</h3>
                 <p class="timeline-org" data-i18n="exp1.org">Saudi Authority for Intellectual Property (SAIP)</p>
                 <ul class="timeline-bullets">
-                    <li data-i18n="exp1.b1">Leading SAIP's enterprise-wide strategic planning, performance management, and project management functions.</li>
-                    <li data-i18n="exp1.b2">Formulated the organization's long-term strategy and translated it into operational plans across all departments.</li>
-                    <li data-i18n="exp1.b3">Built organization-wide performance management through KPIs, dashboards, and reviews aligned with strategic goals.</li>
-                    <li data-i18n="exp1.b4">Overseeing the strategic portfolio roadmap including initiative prioritization, resource allocation, and execution oversight.</li>
-                    <li data-i18n="exp1.b5">Founding team member of Saudi Arabia's first Collective Management Organization (CMO) and key contributor to the Saudi Fund-in-Trust initiative at WIPO.</li>
+                    <li data-i18n="exp1.b1">Built SAIP&#39;s Strategy Management Office from a blank page — the team, the frameworks, the dashboards, the governance rhythm.</li>
+                    <li data-i18n="exp1.b2">Translated SAIP&#39;s founding mandate into a long-term strategy and the operating model to deliver it, down to every department.</li>
+                    <li data-i18n="exp1.b3">Designed the performance architecture — KPIs, dashboards, review cadence — that the whole organization executes against.</li>
+                    <li data-i18n="exp1.b4">Took SAIP&#39;s strategic portfolio from informal to fully governed — every initiative tracked, resourced, and accountable.</li>
+                    <li data-i18n="exp1.b5">Co-founded Saudi Arabia&#39;s first Collective Management Organization; anchored the Saudi Fund-in-Trust initiative at WIPO.</li>
                 </ul>
             </div>
 
@@ -869,9 +880,9 @@
                 <h3 class="timeline-role" data-i18n="exp2.role">Head of Planning &amp; Performance</h3>
                 <p class="timeline-org" data-i18n="exp1.org">Saudi Authority for Intellectual Property (SAIP)</p>
                 <ul class="timeline-bullets">
-                    <li data-i18n="exp2.b1">Led the Planning and Performance Department, aligning strategic objectives with performance KPIs.</li>
-                    <li data-i18n="exp2.b2">Produced regular progress reports and performance dashboards for executive leadership.</li>
-                    <li data-i18n="exp2.b3">Advised executive management on strategy implementation and organizational effectiveness.</li>
+                    <li data-i18n="exp2.b1">Built and led the department that became the nerve center for all of SAIP&#39;s performance visibility.</li>
+                    <li data-i18n="exp2.b2">Designed the KPI architecture and reporting cadence that executive leadership depended on to run the organization.</li>
+                    <li data-i18n="exp2.b3">Became the internal authority on strategy execution — the person leadership called when targets weren&#39;t tracking.</li>
                 </ul>
             </div>
 
@@ -881,9 +892,9 @@
                 <h3 class="timeline-role" data-i18n="exp3.role">Performance Manager</h3>
                 <p class="timeline-org" data-i18n="exp3.org">Vision Realization Office – Ministry of Labor and Social Development</p>
                 <ul class="timeline-bullets">
-                    <li data-i18n="exp3.b1">Monitored MLSD Vision 2030 goals and recommended corrective actions to leadership.</li>
-                    <li data-i18n="exp3.b2">Coordinated with SMO, Adaa, and Vision Realization Program offices across government.</li>
-                    <li data-i18n="exp3.b3">Ensured benefits realization of strategic initiatives.</li>
+                    <li data-i18n="exp3.b1">Embedded inside the Ministry as the watchdog for Vision 2030 delivery — tracking targets, flagging gaps, escalating to leadership.</li>
+                    <li data-i18n="exp3.b2">Bridged the Ministry with Adaa, SMO, and the Vision Realization network — keeping national and ministerial goals in sync.</li>
+                    <li data-i18n="exp3.b3">Held accountability for ensuring ministerial initiatives produced actual, measurable results — not just activity.</li>
                 </ul>
             </div>
 
@@ -893,9 +904,9 @@
                 <h3 class="timeline-role" data-i18n="exp4.role">Strategy &amp; Performance Supervisor</h3>
                 <p class="timeline-org" data-i18n="exp4.org">Small &amp; Medium Enterprises General Authority (Monsha'at)</p>
                 <ul class="timeline-bullets">
-                    <li data-i18n="exp4.b1">Represented SMEA in NTP 2.0 planning and alignment with Vision 2030 entities.</li>
-                    <li data-i18n="exp4.b2">Led corporate performance implementation using the Balanced Scorecard methodology.</li>
-                    <li data-i18n="exp4.b3">Managed initiative alignment, reporting, and budgeting processes.</li>
+                    <li data-i18n="exp4.b1">Brought Monsha&#39;at into the national planning ecosystem — represented the Authority in NTP 2.0 and across Vision 2030 bodies.</li>
+                    <li data-i18n="exp4.b2">Built the BSC-based performance framework from the ground up — first time the Authority had a functioning strategy execution system.</li>
+                    <li data-i18n="exp4.b3">Owned the full performance cycle: planning, tracking, reporting, and budget alignment — end to end.</li>
                 </ul>
             </div>
 
@@ -905,9 +916,9 @@
                 <h3 class="timeline-role" data-i18n="exp5.role">Senior Strategy Analyst</h3>
                 <p class="timeline-org" data-i18n="exp5.org">Elm Information Security Company</p>
                 <ul class="timeline-bullets">
-                    <li data-i18n="exp5.b1">Developed and executed corporate and departmental strategy maps and scorecards.</li>
-                    <li data-i18n="exp5.b2">Cascaded KPIs and managed strategic initiatives across business units.</li>
-                    <li data-i18n="exp5.b3">Led strategic planning workshops and presented annual performance reports.</li>
+                    <li data-i18n="exp5.b1">Where the discipline was built: strategy mapping, KPI design, cascade logic, scorecard architecture.</li>
+                    <li data-i18n="exp5.b2">Managed Elm&#39;s corporate scorecard and the strategic initiative pipeline across all business units.</li>
+                    <li data-i18n="exp5.b3">Led annual strategic planning cycles and presented performance results to senior leadership.</li>
                 </ul>
             </div>
 
@@ -923,22 +934,22 @@
         <div class="section-divider"></div>
         <div class="achievements-grid">
             <div class="achievement-card">
-                <p data-i18n="ach1">Built and led the strategic performance function from scratch at both Monsha'at and SAIP — two of Saudi Arabia's most active government transformation entities.</p>
+                <p data-i18n="ach1">Built the performance function twice — once at Monsha&#39;at, once at SAIP. Both are still running.</p>
             </div>
             <div class="achievement-card">
-                <p data-i18n="ach2">Co-developed KPIs for two national strategies, contributing to cross-ministerial performance frameworks used across the Saudi government.</p>
+                <p data-i18n="ach2">The KPI frameworks I designed are embedded in two national strategies and used across Saudi government today.</p>
             </div>
             <div class="achievement-card">
-                <p data-i18n="ach3">Recognized by Adaa — Saudi Arabia's national performance measurement body — as one of the top government entities in strategic alignment.</p>
+                <p data-i18n="ach3">Adaa — the national performance body — ranked SAIP among the top government entities in strategic alignment. That&#39;s the system and the team I built.</p>
             </div>
             <div class="achievement-card">
-                <p data-i18n="ach4">Founding team member of Saudi Arabia's first Collective Management Organization (CMO) and key contributor to the Saudi Fund-in-Trust initiative at WIPO.</p>
+                <p data-i18n="ach4">Co-founded Saudi Arabia&#39;s first Collective Management Organization. Anchored the Saudi Fund-in-Trust at WIPO.</p>
             </div>
             <div class="achievement-card">
-                <p data-i18n="ach5">Represented Saudi Arabia and SAIP in international strategic committees and forums, advancing Saudi interests on the global stage.</p>
+                <p data-i18n="ach5">The Saudi face in rooms that shaped international IP policy — WIPO committees, strategic forums, bilateral discussions.</p>
             </div>
             <div class="achievement-card">
-                <p data-i18n="ach6">Board Member of a nonprofit organization focused on capacity building and societal impact — demonstrating commitment beyond the professional mandate.</p>
+                <p data-i18n="ach6">Because the work doesn&#39;t stop at the office door — Board member of a nonprofit dedicated to human development.</p>
             </div>
         </div>
     </div>
@@ -1064,7 +1075,7 @@
         <div class="section-divider" style="margin:0 auto 3rem"></div>
         <div class="blog-coming-soon fade-in">
             <div class="blog-icon">✍️</div>
-            <p data-i18n="blog.text">Thoughts on strategy, government transformation, Vision 2030, and leadership — coming soon.</p>
+            <p data-i18n="blog.text">Writing on strategy, Vision 2030, and what it actually takes to build institutions that work — coming soon.</p>
         </div>
     </div>
 </section>
@@ -1075,7 +1086,7 @@
         <p class="section-label" data-i18n="contact.label" style="color:var(--gold);text-align:center">Get in Touch</p>
         <h2 class="section-title section-title-light" data-i18n="contact.title" style="text-align:center">Contact</h2>
         <div class="section-divider" style="margin:0 auto 1.5rem"></div>
-        <p class="contact-tagline" data-i18n="contact.tagline">Open to strategic conversations, speaking invitations, and select advisory opportunities.</p>
+        <p class="contact-tagline" data-i18n="contact.tagline">Open to strategic conversations, speaking engagements, and select advisory roles.</p>
         <div class="contact-items">
 
             <div class="contact-item">
@@ -1161,57 +1172,57 @@
         'hero.subtitle':'Strategy Management Office &nbsp;·&nbsp; Saudi Authority for Intellectual Property',
         'hero.tagline':'&ldquo;Turning national ambition<br>into institutional reality.&rdquo;',
         'hero.stat1.label':'Years','hero.stat2.label':'Organizations',
-        'hero.stat3.label':'Certifications','hero.stat4.label':"Int'l Representation",
+        'hero.stat3.label':'Certifications','hero.stat4.label':'Built from Scratch',
         'about.label':'About',
-        'about.title':'Strategist. Institution Builder. National Contributor.',
-        'about.p1':"I've spent the past 13 years at the intersection of strategy and execution — not as an outside adviser, but as the person building the systems from within. My career has centered on a single question: how do institutions translate national ambition into measurable results?",
-        'about.p2':"At Elm, Monsha'at, and now SAIP, I've built planning and performance functions from the ground up — designing the frameworks, leading the teams, and owning the outcomes at each stage of Saudi Arabia's transformation journey.",
-        'about.p3':"At SAIP, I lead the Strategy Management Office across the full enterprise: from formulating long-term strategy to overseeing execution through KPIs, dashboards, and portfolio management. Beyond the institution, I represent Saudi Arabia's intellectual property interests in international forums, including a founding role in the Saudi Fund-in-Trust initiative at WIPO.",
-        'about.p4':"I believe the best strategy work is invisible to the public — but it is foundational to everything that works.",
-        'pillar1.title':'National Strategy','pillar1.desc':'Direct, sustained involvement in Vision 2030 delivery across multiple government entities.',
-        'pillar2.title':'Institution Building','pillar2.desc':'Built strategic performance functions from scratch at two major government authorities.',
-        'pillar3.title':'Performance &amp; KPIs','pillar3.desc':'Developed cross-ministerial KPI frameworks used in national performance measurement.',
-        'pillar4.title':'Global Representation','pillar4.desc':'Representing Saudi interests at WIPO and international strategic committees.',
+        'about.title': 'Strategist. Builder. Insider.',
+        'about.p1': "Thirteen years. Three government transformation entities. Two performance functions built from the ground up. One consistent conviction: strategy only matters when it changes what actually happens.",
+        'about.p2': "I&#39;ve spent my career inside the system, not advising from outside it. At Elm, Monsha&#39;at, and now SAIP, the question has always been the same — how do you take a national ambition and build the machinery that makes it real?",
+        'about.p3': "Today I lead the Strategy Management Office at SAIP — the full stack: long-term strategy, KPIs, dashboards, portfolio governance, and the team that makes it run. Beyond the organization, I represent Saudi interests internationally, including founding Saudi Arabia&#39;s first Collective Management Organization and anchoring the Saudi Fund-in-Trust initiative at WIPO.",
+        'about.p4': "The best strategy work doesn&#39;t announce itself. It&#39;s the foundation everything else stands on.",
+        'pillar1.title':'National Strategy','pillar1.desc': 'Not a consultant to Vision 2030 — a builder inside it. Across three entities, for thirteen years.',
+        'pillar2.title':'Institution Building','pillar2.desc': 'Twice handed a blank page and told to build a function. Twice delivered.',
+        'pillar3.title':'Performance &amp; KPIs','pillar3.desc': 'The frameworks, the scorecards, the dashboards — designed for ministers, used across government.',
+        'pillar4.title':'Global Representation','pillar4.desc': "Saudi Arabia&#39;s voice in international IP forums — from committee tables to founding moments.",
         'exp.label':'Career','exp.title':'Professional Experience',
         'exp1.period':'Apr 2023 – Present',
         'exp1.role':'Executive Director, Strategy Management Office',
         'exp1.org':'Saudi Authority for Intellectual Property (SAIP)',
-        'exp1.b1':"Leading SAIP's enterprise-wide strategic planning, performance management, and project management functions.",
-        'exp1.b2':"Formulated the organization's long-term strategy and translated it into operational plans across all departments.",
-        'exp1.b3':'Built organization-wide performance management through KPIs, dashboards, and reviews aligned with strategic goals.',
-        'exp1.b4':'Overseeing the strategic portfolio roadmap including initiative prioritization, resource allocation, and execution oversight.',
-        'exp1.b5':"Founding team member of Saudi Arabia's first Collective Management Organization (CMO) and key contributor to the Saudi Fund-in-Trust initiative at WIPO.",
+        'exp1.b1': "Built SAIP&#39;s Strategy Management Office from a blank page — the team, the frameworks, the dashboards, the governance rhythm.",
+        'exp1.b2': "Translated SAIP&#39;s founding mandate into a long-term strategy and the operating model to deliver it, down to every department.",
+        'exp1.b3': 'Designed the performance architecture — KPIs, dashboards, review cadence — that the whole organization executes against.',
+        'exp1.b4': "Took SAIP&#39;s strategic portfolio from informal to fully governed — every initiative tracked, resourced, and accountable.",
+        'exp1.b5': "Co-founded Saudi Arabia&#39;s first Collective Management Organization; anchored the Saudi Fund-in-Trust initiative at WIPO.",
         'exp2.period':'Jan 2020 – Mar 2023',
         'exp2.role':'Head of Planning &amp; Performance',
         'exp2.org':'Saudi Authority for Intellectual Property (SAIP)',
-        'exp2.b1':'Led the Planning and Performance Department, aligning strategic objectives with performance KPIs.',
-        'exp2.b2':'Produced regular progress reports and performance dashboards for executive leadership.',
-        'exp2.b3':'Advised executive management on strategy implementation and organizational effectiveness.',
+        'exp2.b1': "Built and led the department that became the nerve center for all of SAIP&#39;s performance visibility.",
+        'exp2.b2': 'Designed the KPI architecture and reporting cadence that executive leadership depended on to run the organization.',
+        'exp2.b3': "Became the internal authority on strategy execution — the person leadership called when targets weren&#39;t tracking.",
         'exp3.period':'Mar 2019 – Dec 2019',
         'exp3.role':'Performance Manager',
         'exp3.org':'Vision Realization Office – Ministry of Labor and Social Development',
-        'exp3.b1':'Monitored MLSD Vision 2030 goals and recommended corrective actions to leadership.',
-        'exp3.b2':'Coordinated with SMO, Adaa, and Vision Realization Program offices across government.',
-        'exp3.b3':'Ensured benefits realization of strategic initiatives.',
+        'exp3.b1': 'Embedded inside the Ministry as the watchdog for Vision 2030 delivery — tracking targets, flagging gaps, escalating to leadership.',
+        'exp3.b2': 'Bridged the Ministry with Adaa, SMO, and the Vision Realization network — keeping national and ministerial goals in sync.',
+        'exp3.b3': 'Held accountability for ensuring ministerial initiatives produced actual, measurable results — not just activity.',
         'exp4.period':'Jul 2017 – Mar 2019',
         'exp4.role':'Strategy &amp; Performance Supervisor',
         'exp4.org':'Small &amp; Medium Enterprises General Authority (Monsha\'at)',
-        'exp4.b1':'Represented SMEA in NTP 2.0 planning and alignment with Vision 2030 entities.',
-        'exp4.b2':'Led corporate performance implementation using the Balanced Scorecard methodology.',
-        'exp4.b3':'Managed initiative alignment, reporting, and budgeting processes.',
+        'exp4.b1': "Brought Monsha&#39;at into the national planning ecosystem — represented the Authority in NTP 2.0 and across Vision 2030 bodies.",
+        'exp4.b2': 'Built the BSC-based performance framework from the ground up — first time the Authority had a functioning strategy execution system.',
+        'exp4.b3': 'Owned the full performance cycle: planning, tracking, reporting, and budget alignment — end to end.',
         'exp5.period':'Sep 2013 – Jul 2017',
         'exp5.role':'Senior Strategy Analyst',
         'exp5.org':'Elm Information Security Company',
-        'exp5.b1':'Developed and executed corporate and departmental strategy maps and scorecards.',
-        'exp5.b2':'Cascaded KPIs and managed strategic initiatives across business units.',
-        'exp5.b3':'Led strategic planning workshops and presented annual performance reports.',
+        'exp5.b1': 'Where the discipline was built: strategy mapping, KPI design, cascade logic, scorecard architecture.',
+        'exp5.b2': "Managed Elm&#39;s corporate scorecard and the strategic initiative pipeline across all business units.",
+        'exp5.b3': 'Led annual strategic planning cycles and presented performance results to senior leadership.',
         'ach.label':'Impact','ach.title':'Key Career Achievements',
-        'ach1':"Built and led the strategic performance function from scratch at both Monsha'at and SAIP — two of Saudi Arabia's most active government transformation entities.",
-        'ach2':'Co-developed KPIs for two national strategies, contributing to cross-ministerial performance frameworks used across the Saudi government.',
-        'ach3':"Recognized by Adaa — Saudi Arabia's national performance measurement body — as one of the top government entities in strategic alignment.",
-        'ach4':"Founding team member of Saudi Arabia's first Collective Management Organization (CMO) and key contributor to the Saudi Fund-in-Trust initiative at WIPO.",
-        'ach5':'Represented Saudi Arabia and SAIP in international strategic committees and forums, advancing Saudi interests on the global stage.',
-        'ach6':'Board Member of a nonprofit organization focused on capacity building and societal impact — demonstrating commitment beyond the professional mandate.',
+        'ach1': "Built the performance function twice — once at Monsha&#39;at, once at SAIP. Both are still running.",
+        'ach2': 'The KPI frameworks I designed are embedded in two national strategies and used across Saudi government today.',
+        'ach3': "Adaa — the national performance body — ranked SAIP among the top government entities in strategic alignment. That&#39;s the system and the team I built.",
+        'ach4': "Co-founded Saudi Arabia&#39;s first Collective Management Organization. Anchored the Saudi Fund-in-Trust at WIPO.",
+        'ach5': 'The Saudi face in rooms that shaped international IP policy — WIPO committees, strategic forums, bilateral discussions.',
+        'ach6': "Because the work doesn&#39;t stop at the office door — Board member of a nonprofit dedicated to human development.",
         'skills.label':'Expertise','skills.title':'Core Competencies',
         'skill.s.title':'Strategy',
         'skill.s1':'Strategic Planning &amp; Execution','skill.s2':'Vision 2030 Alignment',
@@ -1241,9 +1252,9 @@
         'edu.degree':'Bachelor of Science in Management Information Systems (MIS)',
         'edu.detail':'Sep 2007 – Jan 2013 &nbsp;·&nbsp; Major GPA: 3.5 / 4.00',
         'blog.label':'Insights','blog.title':'Blog &amp; Thought Leadership',
-        'blog.text':'Thoughts on strategy, government transformation, Vision 2030, and leadership — coming soon.',
+        'blog.text': 'Writing on strategy, Vision 2030, and what it actually takes to build institutions that work — coming soon.',
         'contact.label':'Get in Touch','contact.title':'Contact',
-        'contact.tagline':'Open to strategic conversations, speaking invitations, and select advisory opportunities.',
+        'contact.tagline': 'Open to strategic conversations, speaking engagements, and select advisory roles.',
         'contact.email':'Email','contact.linkedin':'LinkedIn',
         'contact.loc.label':'Location','contact.loc.value':'Riyadh, Saudi Arabia',
         'footer.text':'© 2026 Naif F. AlSubaie &nbsp;·&nbsp; Riyadh, Saudi Arabia'
@@ -1257,7 +1268,7 @@
         'hero.subtitle': 'مكتب إدارة الاستراتيجية &nbsp;·&nbsp; هيئة الملكية الفكرية',
         'hero.tagline': '&ldquo;تحويل الطموح الوطني<br>إلى واقع مؤسسي.&rdquo;',
         'hero.stat1.label': 'سنة','hero.stat2.label': 'جهة',
-        'hero.stat3.label': 'شهادة','hero.stat4.label': 'تمثيل دولي',
+        'hero.stat3.label': 'شهادة','hero.stat4.label': 'بُنيت من الصفر',
         'about.label': 'التعريف',
         'about.title': 'استراتيجي. بانٍ للمؤسسات. مساهم وطني.',
         'about.p1': 'قضيت السنوات الثلاث عشرة الماضية عند تقاطع الاستراتيجية والتنفيذ — ليس كمستشار خارجي، بل كمن يبني المنظومات من الداخل. تمحور مساري المهني حول سؤال واحد: كيف تترجم الجهات الطموح الوطني إلى نتائج قابلة للقياس؟',
